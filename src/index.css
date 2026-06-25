@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Light Theme Variables */
+  --bg-primary: #FAF9F6;      /* Alabaster / warm white */
+  --bg-secondary: #FFFFFF;    /* Pure white for cards */
+  --bg-tertiary: #F3F1EC;     /* Soft warm grey */
+  --text-primary: #1A1A1A;    /* Dark charcoal */
+  --text-secondary: #6B6861;  /* Muted warm grey */
+  --text-muted: #9E9B94;
+  --accent: #C5A880;          /* Champagne gold */
+  --accent-hover: #B3956E;
+  --accent-light: rgba(197, 168, 128, 0.1);
+  --border: #E6E4DF;
+  --border-focus: #C5A880;
+  
+  --shadow-sm: 0 2px 8px rgba(26, 26, 26, 0.04);
+  --shadow-md: 0 12px 32px rgba(26, 26, 26, 0.06);
+  --shadow-lg: 0 24px 48px rgba(26, 26, 26, 0.1);
+  
+  --sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --display: 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  color-scheme: light dark;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Class to enforce theme manually */
+[data-theme='dark'] {
+  --bg-primary: #0F0E0D;      /* Deep black coffee */
+  --bg-secondary: #171615;    /* Very dark brown/grey */
+  --bg-tertiary: #22201F;     /* Accent dark brown/grey */
+  --text-primary: #F5F4F0;    /* Soft off-white */
+  --text-secondary: #AFAAA0;  /* Muted silver-gold */
+  --text-muted: #736E66;
+  --accent: #E0C7A6;          /* Shimmering champagne */
+  --accent-hover: #F2DDBE;
+  --accent-light: rgba(224, 199, 166, 0.15);
+  --border: #2B2826;
+  --border-focus: #E0C7A6;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.7);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
